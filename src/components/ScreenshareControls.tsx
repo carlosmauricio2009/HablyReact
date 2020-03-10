@@ -19,7 +19,7 @@ const EmptySpacer = styled.span({
 // ScreenshareControls displays a button that activates the screenshare flow.
 // It also provides a link to install the screenshare extension if it is
 // required by the user's browser.
-const ScreenshareControls: React.SFC = () => (
+const ScreenshareControls: React.FC = () => (
   <RequestDisplayMedia
     render={(getDisplayMedia, sharing) => {
       if (!sharing.available) {
@@ -29,7 +29,7 @@ const ScreenshareControls: React.SFC = () => (
       return (
         <Button title="Screen Share" onClick={getDisplayMedia}>
           <ShareScreenIcon fill="#505658" />
-          <span>Share screen</span>
+          <span>Share My Screen</span>
         </Button>
       );
     }}

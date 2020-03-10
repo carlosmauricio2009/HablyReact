@@ -27,7 +27,7 @@ interface Props {
   roomId: string;
 }
 
-const SidebarLinks: React.SFC<Props> = ({ roomId }) => {
+const SidebarLinks: React.FC<Props> = ({ roomId }) => {
   const helpUrl = getConfigFromMetaTag('help-url');
   const feedbackUrl = getConfigFromMetaTag('feedback-url');
   if (helpUrl && feedbackUrl) {

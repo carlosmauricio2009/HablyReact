@@ -121,7 +121,7 @@ interface ChatMessageGroupProps {
   peer: Peer | undefined;
 }
 
-const ChatMessageGroup: React.SFC<ChatMessageGroupProps> = ({
+const ChatMessageGroup: React.FC<ChatMessageGroupProps> = ({
   chats,
   peer
 }) => (
@@ -153,7 +153,7 @@ interface Props {
 // includes a message display embedded inside a StayDownContainer so that
 // it remains scrolled to the bottom, a ChatInput to type messages, and a
 // text element that displays currently typing peers.
-const ChatContainer: React.SFC<Props> = ({
+const ChatContainer: React.FC<Props> = ({
   roomAddress,
   sendRtt,
   toggleRtt,
@@ -162,7 +162,7 @@ const ChatContainer: React.SFC<Props> = ({
   <Container>
     <Header onClick={toggleChat}>
       <KeyboardArrowDownIcon />
-      <span>Chat</span>
+      <span>Messages</span>
     </Header>
     <StyledStayDownContainer>
       <ChatList
@@ -176,12 +176,11 @@ const ChatContainer: React.SFC<Props> = ({
       <ChatInput
         room={roomAddress}
         rtt={sendRtt}
-        placeholder="Send a message..."
+        placeholder="Send a message with enter"
       />
-      <label style={{ display: 'block' }}>
-        <input type="checkbox" checked={sendRtt} onChange={toggleRtt} />
-        Send as I type
-      </label>
+     
+
+
       <ComposersContainer>
         <ChatComposers room={roomAddress} />
       </ComposersContainer>

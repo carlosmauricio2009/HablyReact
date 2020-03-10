@@ -19,9 +19,8 @@ interface ContainerProps {
 const Container = styled.button<ContainerProps>`
   position: absolute;
   bottom: 0;
-  right: 0;
-  width: 16.6667%;
-  text-align: left;
+  left: 0;
+  text-align: center;
   z-index: 300;
   font-size: 18px;
   border: ${({ newMessage, theme }) =>
@@ -54,7 +53,7 @@ const Container = styled.button<ContainerProps>`
   }
 `;
 
-const ChatToggle: React.SFC<Props> = ({ roomAddress, onClick }) => {
+const ChatToggle: React.FC<Props> = ({ roomAddress, onClick }) => {
   const [newMessage, setNewMessage] = useState(false);
   return (
     <ChatList
@@ -70,7 +69,7 @@ const ChatToggle: React.SFC<Props> = ({ roomAddress, onClick }) => {
                 newMessage={newMessage}
               >
                 <KeyboardArrowUpIcon />
-                <span>Chat</span>
+                <span>Click For Chat</span>
                 <MoreHorizIcon />
               </Container>
             )}

@@ -252,8 +252,7 @@
         roomName: params.get('room'),
         root: document.getElementById('root'),
         gridPlaceholder: () => SimpleWebRTC.loadTemplate('empty-peer-grid'),
-        haircheckHeaderPlaceholder: () =>
-          SimpleWebRTC.loadTemplate('haircheck-header'),
+        haircheckHeaderPlaceholder: () => SimpleWebRTC.loadTemplate('haircheck-header'),
         emptyRosterPlaceholder: () => SimpleWebRTC.loadTemplate('empty-roster'),
         homepagePlaceholder: () => SimpleWebRTC.loadTemplate('homepage')
       });

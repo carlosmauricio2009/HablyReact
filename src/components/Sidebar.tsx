@@ -7,6 +7,7 @@ import Roster from './Roster';
 import SidebarLinks from './SidebarLinks';
 import SidebarUserControls from './SidebarUserControls';
 
+// Container control my video sidebar size 
 const Container = styled.div`
   position: relative;
   padding: 10px;
@@ -14,10 +15,10 @@ const Container = styled.div`
     position: absolute;
     z-index: 200;
     top: 0;
-    width: 185px;
+    width: 285px;
   }
   ${mq.SMALL_DESKTOP} {
-    width: 220px;
+    width: 420px;
     border-right: ${({ theme }) =>
       css`1px solid ${colorToString(theme.border)}`};
   }

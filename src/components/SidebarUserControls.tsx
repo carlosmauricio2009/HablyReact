@@ -95,7 +95,7 @@ const LocalScreenOverlay = styled.div({
   }
 });
 
-const LocalScreen: React.SFC<LocalScreenProps> = ({ screenshareMedia }) => (
+const LocalScreen: React.FC<LocalScreenProps> = ({ screenshareMedia }) => (
   <MediaControls
     media={screenshareMedia}
     autoRemove={true}
@@ -110,7 +110,7 @@ const LocalScreen: React.SFC<LocalScreenProps> = ({ screenshareMedia }) => (
   />
 );
 
-const SidebarUserControls: React.SFC<Props> = ({
+const SidebarUserControls: React.FC<Props> = ({
   activeSpeakerView,
   toggleActiveSpeakerView,
   pttMode,
@@ -190,8 +190,8 @@ const SidebarUserControls: React.SFC<Props> = ({
                 checked={pttMode}
                 onChange={togglePttMode}
               />
-              Walkie Talkie Mode
-              <Tooltip text="Use spacebar to toggle your microphone on/off" />
+              Mode Space For Speaker
+              
             </ToggleContainer>
           </div>
         </RoomModeToggles>
