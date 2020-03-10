@@ -49,7 +49,7 @@ const DisplayNameInput: React.SFC<Props> = ({
 
   return (
     <input
-      placeholder="Your name (click to edit)"
+      placeholder="pour name (click to edit)"
       value={typedName}
       onChange={e => setTypedName(e.target.value)}
       onKeyPress={({ key }) => {
