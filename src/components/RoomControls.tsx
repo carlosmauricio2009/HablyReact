@@ -18,8 +18,9 @@ const LeaveButton = styled(TalkyButton)({
   width: '100%'
 });
 
+//control button Invite and End Meeting
 const Container = styled.div({
-  display: 'grid',
+  //display: 'grid',
   gridTemplateAreas: `
     'invite invite'
     'lock leave'
@@ -65,7 +66,7 @@ interface Props {
   setPassword: (s: string) => void;
 }
 
-const RoomControls: React.SFC<Props> = ({
+const RoomControls: React.FC<Props> = ({
   shouldShowPasswordModal,
   passwordRequired,
   showPasswordModal,
@@ -76,33 +77,15 @@ const RoomControls: React.SFC<Props> = ({
   return (
     <Container>
       <InviteButton />
-      <LockButton
-        onClick={
-          passwordRequired
-            ? () => {
-                setPassword('');
-              }
-            : showPasswordModal
-        }
-      >
-        {passwordRequired ? (
-          <>
-            <LockIcon fill="#505658" />
-            <span>Unlock</span>
-          </>
-        ) : (
-          <>
-            <LockOpenIcon fill="#505658" />
-            <span>Lock</span>
-          </>
-        )}
-      </LockButton>
+
       <a style={{ gridArea: 'leave' }} href={leaveUrl ? leaveUrl : '/'}>
         <LeaveButton>
           <CallEndIcon fill="#505658" />
-          <span>End</span>
+          <span>End Meeting</span>
         </LeaveButton>
       </a>
+
+
       <StyledModal
         isOpen={shouldShowPasswordModal}
         onRequestClose={hidePasswordModal}

@@ -78,7 +78,7 @@ interface LocalMediaControlsProps {
 
 // LocalMediaControls displays buttons to toggle the mute/pause state of the
 // user's audio/video.
-const LocalMediaControls: React.SFC<LocalMediaControlsProps> = ({
+const LocalMediaControls: React.FC<LocalMediaControlsProps> = ({
   isMuted,
   unmute,
   mute,
@@ -88,6 +88,8 @@ const LocalMediaControls: React.SFC<LocalMediaControlsProps> = ({
   pauseVideo
 }) => (
   <Container>
+
+  
     <MuteButton
       isOff={isMuted}
       isFlashing={isSpeakingWhileMuted}
@@ -95,12 +97,16 @@ const LocalMediaControls: React.SFC<LocalMediaControlsProps> = ({
     >
       {isMuted ? <MicOffIcon /> : <MicIcon />}
     </MuteButton>
+
+
     <PauseButton
       isOff={isPaused}
       onClick={() => (isPaused ? resumeVideo() : pauseVideo())}
     >
       {isPaused ? <VideocamOffIcon /> : <VideocamIcon />}
     </PauseButton>
+
+
     <ScreenshareControls />
   </Container>
 );

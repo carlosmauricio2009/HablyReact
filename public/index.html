@@ -255,12 +255,11 @@
       
       SimpleWebRTC.run({
         roomName: params.get('room'),
-        
         root: document.getElementById('root'),
-        gridPlaceholder: () => SimpleWebRTC.loadTemplate('empty-peer-grid'),
-        haircheckHeaderPlaceholder: () => SimpleWebRTC.loadTemplate('haircheck-header'),
+        gridPlaceholder: () => SimpleWebRTC.loadTemplate('empty-peer-grid'), //screen sharing camera or screen
+        haircheckHeaderPlaceholder: () => SimpleWebRTC.loadTemplate('haircheck-header'), //title second screen
         emptyRosterPlaceholder: () => SimpleWebRTC.loadTemplate('empty-roster'),
-        homepagePlaceholder: () => SimpleWebRTC.loadTemplate('homepage')
+        homepagePlaceholder: () => SimpleWebRTC.loadTemplate('homepage') //page choose room
       });
     </script>
   </body>
