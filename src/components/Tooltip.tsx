@@ -50,7 +50,7 @@ interface Props {
   text: string;
 }
 
-const Tooltip: React.SFC<Props> = ({ text }) => {
+const Tooltip: React.FC<Props> = ({ text }) => {
   const [showTooltip, setShowTooltip] = useState(false);
   const toggleTooltip = () => setShowTooltip(!showTooltip);
   return (

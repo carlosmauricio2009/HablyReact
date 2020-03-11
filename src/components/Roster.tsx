@@ -24,7 +24,7 @@ interface PeerListItemProps {
   peer: Peer;
 }
 // PeerListItem renders the displayName and mute controls for a peer.
-const PeerListItem: React.SFC<PeerListItemProps> = ({ peer }) => {
+const PeerListItem: React.FC<PeerListItemProps> = ({ peer }) => {
   const { hiddenPeers, togglePeer } = useContext(HiddenPeers);
   const isHidden = hiddenPeers.includes(peer.id);
   return (
@@ -57,7 +57,7 @@ interface Props {
   roomAddress: string;
 }
 
-const Roster: React.SFC<Props> = ({ roomAddress }) => (
+const Roster: React.FC<Props> = ({ roomAddress }) => (
   <PeerList
     room={roomAddress}
     render={({ peers }) => {

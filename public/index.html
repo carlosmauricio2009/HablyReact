@@ -30,6 +30,7 @@
         line-height: 1.5;
         color: #4d5659;
         text-rendering: optimizeSpeed;
+  
       }
 
       code {
@@ -181,7 +182,7 @@
       }
 
       .container {
-        margin: 120px auto;
+        margin: 50px auto;
         width: 100%;
         max-width: 1000px;
         text-align: center;
@@ -193,6 +194,8 @@
 
 
   <body>
+  
+   
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
@@ -224,12 +227,12 @@
 
     <!-- Template the HomePage The Hably -->
     <template id="homepage">
-      
       <h1 style="text-align: center">Hably</h1>
       
       <h3 style="text-align: center">Free Real Time Communication for Teachers, Mentors and Everyone</h3>
       <div class="container">
         <form class="create-room-form" method="GET" action="/">
+          <!-- square enter room -->
           <span class="create-room-form-input-wrapper"
             ><span class="domain">hably/</span
             ><input
@@ -248,8 +251,11 @@
     </template>
     <script type="text/javascript">
       const params = new URLSearchParams(window.location.search);
+      
+      
       SimpleWebRTC.run({
         roomName: params.get('room'),
+        
         root: document.getElementById('root'),
         gridPlaceholder: () => SimpleWebRTC.loadTemplate('empty-peer-grid'),
         haircheckHeaderPlaceholder: () => SimpleWebRTC.loadTemplate('haircheck-header'),

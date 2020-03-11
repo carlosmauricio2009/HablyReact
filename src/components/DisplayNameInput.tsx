@@ -26,7 +26,7 @@ function getLocalDisplayName() {
   return name;
 }
 
-const DisplayNameInput: React.SFC<Props> = ({
+const DisplayNameInput: React.FC<Props> = ({
   displayName,
   setDisplayName
 }) => {
@@ -49,7 +49,7 @@ const DisplayNameInput: React.SFC<Props> = ({
 
   return (
     <input
-      placeholder="pour name (click to edit)"
+      placeholder="(click to edit.)"
       value={typedName}
       onChange={e => setTypedName(e.target.value)}
       onKeyPress={({ key }) => {

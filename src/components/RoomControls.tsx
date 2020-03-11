@@ -100,7 +100,7 @@ const RoomControls: React.SFC<Props> = ({
       <a style={{ gridArea: 'leave' }} href={leaveUrl ? leaveUrl : '/'}>
         <LeaveButton>
           <CallEndIcon fill="#505658" />
-          <span>Leave</span>
+          <span>End</span>
         </LeaveButton>
       </a>
       <StyledModal

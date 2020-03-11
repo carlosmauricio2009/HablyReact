@@ -56,6 +56,7 @@ const run = ({
 }: RunConfig) => {
   if (CONFIG_URL.endsWith('YOUR_API_KEY')) {
     ReactDOM.render(
+      
       <div className="container" style={{textAlign: 'left'}}>
         <h1>Configuration Setup Needed:</h1>
         <p>Edit <code>public/index.html</code> to add your API key to the configuration URL.</p>
@@ -92,6 +93,7 @@ const run = ({
       />
     </Provider>,
     root
+    
   );
 };
 

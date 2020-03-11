@@ -34,6 +34,7 @@ const RootContainer = styled.div({
   display: 'flex',
   flexDirection: 'column',
   minHeight: '100vh'
+  
 });
 
 const Container = styled.div({
@@ -86,6 +87,9 @@ class Index extends Component<Props, State> {
 
   public render() {
     return (
+
+
+
       <Provider configUrl={this.props.configUrl} userData={this.props.userData}>
         <LocalMediaList
           render={({ media }) => (
