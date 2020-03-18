@@ -188,7 +188,7 @@
         text-align: center;
       }
     </style>
-  <script type="text/javascript" src="bundle.min.js"></script></head>
+  </head>
 
 
 
@@ -252,13 +252,7 @@
     <script type="text/javascript">
       const params = new URLSearchParams(window.location.search);
       
-	app.use(express.static(path.join(__dirname, 'build')));
-
-
-	app.get('/*', (req, res) => {
-  	res.sendFile(path.join(__dirname, 'build', 'index.html'));
-	});      
-
+      
       SimpleWebRTC.run({
         roomName: params.get('room'),
         root: document.getElementById('root'),
